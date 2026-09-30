@@ -59,6 +59,16 @@ Os tiros que não atingirem nenhum navio são considerados tiros na água.
 
 Cada jogador deve registar na grelha do adversário os resultados dos seus tiros.
 
+## Tipos de Navios
+
+| Batalha Naval | Descobrimentos | Inglês | Dimensão | Nº de Navios |
+|---|---|---|---:|---:|
+| Porta-aviões | Galeão | Galleon | 5 | 1 |
+| Navio de 4 canhões | Fragata | Frigate | 4 | 1 |
+| Navio de 3 canhões | Nau | Carrack | 3 | 2 |
+| Navio de 2 canhões | Caravela | Caravel | 2 | 3 |
+| Submarino | Barca | Barge | 1 | 4 |
+
 Quando todos os quadrados de um navio forem atingidos, esse navio é considerado afundado.
 
 ### Objetivo

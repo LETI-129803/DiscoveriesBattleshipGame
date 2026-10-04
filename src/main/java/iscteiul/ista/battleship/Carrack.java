@@ -1,5 +1,11 @@
 /**
+ * Representa uma Nau (Carrack) no jogo de batalha naval.
+ * A Nau é um navio de tamanho 3 que pode estar orientado
+ * na vertical (NORTE/SUL) ou na horizontal (ESTE/OESTE).
  *
+ * @author LETI-129803
+ * @see Ship
+ * @see IShip
  */
 package iscteiul.ista.battleship;
 
@@ -8,8 +14,13 @@ public class Carrack extends Ship {
     private static final String NAME = "Nau";
 
     /**
-     * @param bearing
-     * @param pos
+     * Cria uma Nau com o rumo e posição inicial especificados.
+     * A Nau ocupa 3 posições consecutivas no tabuleiro, dispostas
+     * verticalmente se o rumo for NORTE/SUL, ou horizontalmente se for ESTE/OESTE.
+     *
+     * @param bearing o rumo (direção) da Nau (NORTH, SOUTH, EAST ou WEST)
+     * @param pos a posição inicial (superior esquerda) da Nau
+     * @throws IllegalArgumentException se o rumo não for uma direção válida
      */
     public Carrack(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Carrack.NAME, bearing, pos);
@@ -29,10 +40,10 @@ public class Carrack extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Retorna o tamanho da Nau.
      *
-     * @see battleship.Ship#getSize()
+     * @return o tamanho da Nau, que é sempre 3
      */
     @Override
     public Integer getSize() {

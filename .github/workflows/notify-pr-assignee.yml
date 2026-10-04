@@ -1,0 +1,49 @@
+name: Notify PR assignee
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - review_requested
+      - synchronize
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mention assignee or reviewer in the PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            if (!pr) return;
+
+            const assignees = (pr.assignees || []).map(a => `@${a.login}`);
+            const reviewers = (pr.requested_reviewers || []).map(r => `@${r.login}`);
+
+            // Ordem de prioridade:
+            // 1) assignee
+            // 2) reviewer solicitado
+            // 3) usuário padrão
+            const mentions = assignees.length
+              ? assignees
+              : reviewers.length
+                ? reviewers
+                : ['@LETI-129788', '@LETI-129803', '@NeyrivanSilva']
+
+            const body = `Olá ${mentions.join(', ')}, há um Pull Request pendente para revisão: ${pr.html_url}`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body
+            });

@@ -45,6 +45,14 @@ Na versão dos Descobrimentos são utilizados os seguintes navios:
 | Caravela | Caravel | 2 | 3 |
 | Barca | Barge | 1 | 4 |
 
+### Referências históricas dos navios
+
+- [Galeão – Wikipédia](https://pt.wikipedia.org/wiki/Gale%C3%A3o)
+- [Fragata – Wikipédia](https://pt.wikipedia.org/wiki/Fragata)
+- [Nau – Wikipédia](https://pt.wikipedia.org/wiki/Nau)
+- [Caravela – Wikipédia](https://pt.wikipedia.org/wiki/Caravela)
+- [Barca – Wikipédia](https://pt.wikipedia.org/wiki/Barca)
+
 ### Turnos
 
 Depois de posicionarem as suas frotas, os jogadores jogam alternadamente.

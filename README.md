@@ -121,3 +121,12 @@ Quando todos os quadrados de um navio forem atingidos, esse navio é considerado
 O objetivo do jogo é atingir e afundar todos os navios da frota adversária.
 
 O primeiro jogador a conseguir afundar toda a frota do adversário ganha o jogo.
+
+
+
+### ficha 1 
+Iara= Readme inicial, algumas User Stories e regras do jogo
+Nerivan= Tipos de navios, algumas User Stories Github actions/labels
+Diogo= Informações adicionais, algumas User Stories e workflow
+
+Javadoc foi criado em conjunto presencialmente pelos três 

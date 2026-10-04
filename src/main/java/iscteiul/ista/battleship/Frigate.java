@@ -1,5 +1,11 @@
 /**
+ * Representa uma Fragata no jogo de batalha naval.
+ * A Fragata é um navio de tamanho 4 que pode estar orientado
+ * na vertical (NORTE/SUL) ou na horizontal (ESTE/OESTE).
  *
+ * @author NeyrivanMSilva
+ * @see Ship
+ * @see IShip
  */
 package iscteiul.ista.battleship;
 
@@ -8,8 +14,13 @@ public class Frigate extends Ship {
     private static final String NAME = "Fragata";
 
     /**
-     * @param bearing
-     * @param pos
+     * Cria uma Fragata com o rumo e posição inicial especificados.
+     * A Fragata ocupa 4 posições consecutivas no tabuleiro, dispostas
+     * verticalmente se o rumo for NORTE/SUL, ou horizontalmente se for ESTE/OESTE.
+     *
+     * @param bearing o rumo (direção) da Fragata (NORTH, SOUTH, EAST ou WEST)
+     * @param pos a posição inicial (superior esquerda) da Fragata
+     * @throws IllegalArgumentException se o rumo não for uma direção válida
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
@@ -29,10 +40,10 @@ public class Frigate extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Retorna o tamanho da Fragata.
      *
-     * @see battleship.Ship#getSize()
+     * @return o tamanho da Fragata, que é sempre 4
      */
     @Override
     public Integer getSize() {

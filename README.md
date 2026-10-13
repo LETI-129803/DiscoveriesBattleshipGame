@@ -130,3 +130,9 @@ Nerivan= Tipos de navios, algumas User Stories Github actions/labels
 Diogo= Informações adicionais, algumas User Stories e workflow
 
 Javadoc foi criado em conjunto presencialmente pelos três 
+
+
+### ficha 2 
+Iara =
+Nerivan =
+Diogo = 
